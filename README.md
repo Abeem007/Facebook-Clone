@@ -53,7 +53,7 @@ Setup Instructions
 5. Build for Production:
    npm run build
 
-Contributing
+
 Contributions are welcome! Please
 
 License
