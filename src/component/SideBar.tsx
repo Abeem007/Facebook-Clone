@@ -25,7 +25,7 @@ const SideBar: React.FC = () => {
       <aside className="hidden lg:block w-72 shrink-0 px-2 pt-4 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded">
         <div className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-100 cursor-pointer">
           <img
-            src={user?.photoURL || "src/Images/avatar-placeholder.jpg"}
+            src={user?.photoURL || "/Images/avatar-placeholder.jpg"}
             alt="Profile"
             className="rounded-full h-8 w-8 object-cover"
           />

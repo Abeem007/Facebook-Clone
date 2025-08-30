@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-2">
           {" "}
           <img
-            src="public/Images/Facebook_Logo_Primary.png"
+            src="/Images/Facebook_Logo_Primary.png"
             alt="Facebook Logo"
             className="h-8 w-auto"
           />
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
           <button onClick={() => setOpen((o) => !o)}>
             <img
               src={
-                user?.photoURL || "public/Images/Facebook_Logo_Primary.png"
+                user?.photoURL || "/Images/Facebook_Logo_Primary.png"
               }
               alt="Profile"
               className="h-8 w-8 rounded-full object-cover"
