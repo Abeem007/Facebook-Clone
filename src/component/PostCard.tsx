@@ -36,7 +36,7 @@ const PostCard: React.FC<{ post: PostWithUser }> = ({ post }) => {
   //   formattedDate: createdAtDate,
   // });
   return (
-    <div className="bg-white rounded-lg shadow p-4 mb-4 max-w-xl mx-auto">
+    <div className="bg-white rounded-lg shadow p-4 mb-4 w-full">
       {/* header */}
       <div className="flex items-center gap-3 mb-2">
         <img
@@ -85,7 +85,7 @@ const PostCard: React.FC<{ post: PostWithUser }> = ({ post }) => {
       <div className="flex justify-around items-center">
         <button
           onClick={toggle}
-          className={`flex items-center gap-2 text-sm font-medium  rounded-md hover:bg-gray-100 transition-colors ${
+          className={`flex items-center gap-2 text-sm font-medium  rounded-md hover:bg-gray-100 transition-colors px-2 sm:px-4 py-2 ${
             liked ? "text-blue-600" : "text-gray-600"
           }`}
         >

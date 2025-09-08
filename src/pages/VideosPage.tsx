@@ -82,15 +82,21 @@ const VideosPage: React.FC = () => {
           </div>
         </aside>
         {/* Main Content */}
-        <main className="flex-1 p-4 sm:p-6">
-          <h2 className="text-xl font-semibold mb-4 pl-2">Recommended Videos</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 p-2 gap-6 ">
+        <main className="flex-1 p-2 sm:p-4 lg:p-6">
+          <h2 className="text-xl font-semibold mb-4 px-2 sm:px-4">
+            Recommended Videos
+          </h2>
+          
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-1 p-2
+          gap-6"
+          >
             {dummyVideos.map((video) => (
               <div
                 key={video.id}
-                className="bg-white shadow rounded-lg overflow-hidden "
+                className="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg active:shadow-md "
               >
-                <div className="flex gap-3 p-3">
+                <div className="flex gap-3 p-3 items-center">
                   <img
                     src={video.avatar}
                     alt="Profile picture"
@@ -99,12 +105,11 @@ const VideosPage: React.FC = () => {
                   <span>
                     <h4 className="font-bold">{video.displayName}</h4>
                     <p className="text-gray-500 text-sm">{video.time}</p>
-                 
                   </span>
                 </div>
                 <p className="px-6 pb-1"> {video.title}</p>
                 <iframe
-                  className="w-full h-64"
+                  className="w-full h-48 sm:h-56 md:h-64 lg:h-64 xl:h-72 object-cover "
                   src={video.url}
                   title={video.title}
                   allowFullScreen

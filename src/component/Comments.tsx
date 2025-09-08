@@ -40,24 +40,29 @@ const Comments: React.FC<{ postId: string }> = ({ postId }) => {
   return (
     <div className="mt-2">
       {comments.map((c) => (
-        <div key={c.id} className="flex items-start  gap-2 py-3 mb-1">
-          <img src={c.user.image} className="w-8 h-8 rounded-full" />
-          <div className="bg-gray-100 rounded-xl px-4 py-1 text-sm">
+        <div key={c.id} className="flex items-start  gap-2 py-2 mb-1">
+          <img
+            src={c.user.image}
+            className="w-8 h-8 rounded-full object-cover"
+          />
+          <div className="bg-gray-100 rounded-2xl px-4 py-1 text-sm max-w-[80%]">
             <p className="font-medium">{c.user.firstName}</p>
-            <p className="font-light">{c.body}</p>
+            <p className="font-light break-words">{c.body}</p>
           </div>
         </div>
       ))}
 
       {user && (
-        <form onSubmit={send} className="flex gap-2 mt-2">
+        <form onSubmit={send} className="flex items-center gap-2 mt-2 w-full">
           <input
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="flex-1  rounded-full px-4 py-3 text-sm bg-gray-100"
+            className="flex-1  rounded-full px-4 py-3 text-sm bg-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500"
             placeholder="Write a comment…"
           />
-          <button className="text-blue-600 text-sm">Send</button>
+          <button className="text-blue-600 text-sm px-3 py-1 font-medium hover:underline">
+            Send
+          </button>
         </form>
       )}
     </div>

@@ -162,16 +162,16 @@ const GamesPage: React.FC = () => {
     <div className="bg-gray-100 min-h-screen">
       <Header />
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 ">
         {/* sidebar */}
-        <aside className="hidden md:block md:w-85 shrink-0  bg-white h-screen sticky top-0 overflow-y-auto ">
+        <aside className="hidden md:block md:w-64 lg:w-72 shrink-0  bg-white h-screen sticky top-0 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded ">
           <div className="p-3">
             <div className="flex justify-between items-center pb-3 ">
-              <h1 className="text-2xl font-bold ">Games</h1>{" "}
+              <h1 className="text-xl sm:text-2xl font-bold ">Games</h1>{" "}
               <IoSettings className="font-bold  text-2xl" />
             </div>
             {/* Search */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-4">
               <div className="hidden md:flex items-center bg-gray-100 rounded-full px-3 py-1">
                 <FaSearch className="text-gray-600 text-sm" />
                 <input
@@ -234,7 +234,7 @@ const GamesPage: React.FC = () => {
         {/* Main Content */}
         <main className="flex-1 p-4 sm:p-6">
           <h2 className="text-2xl font-semibold px-4">Games we love</h2>
-          <ul className="  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-3">
+          <ul className="  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-3">
             {dummyGames.map((game) => (
               <div
                 key={game.id}
@@ -255,7 +255,7 @@ const GamesPage: React.FC = () => {
           </ul>
 
           <h2 className="text-2xl font-semibold px-4">Top picks for you</h2>
-          <ul className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+          <ul className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
             {topGames.map((games) => (
               <div
                 key={games.id}

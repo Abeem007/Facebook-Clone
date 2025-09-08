@@ -121,7 +121,7 @@ const MarketplacePage: React.FC = () => {
                 key={label}
                 className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-100 cursor-pointer transition"
               >
-                <div className="flex items-center gap-3 w-full text-sm font-medium text-gray-700">
+                <div className="flex items-center gap-3  w-full text-sm font-medium text-gray-700">
                   <ActionIcon icon={Icon} />
                   <span className="text-md font-semibold">{label}</span>
                 </div>
@@ -129,20 +129,22 @@ const MarketplacePage: React.FC = () => {
             ))}
           </div>
         </aside>
-        {/* Main Content   px-3 py-1*/}
-        <main className="flex-1 p-4 sm:p-6">
-          <h2 className="text-xl font-semibold mb-4 pb-4">Marketplace</h2>
-          <div className="grid grid-cols-4 gap-4">
+        {/* Main Content */}
+        <main className="flex-1 p-1  sm:p-4 lg:p-6">
+          <h2 className="text-xl font-semibold mb-4 px-2 sm:px-4 py-2 ">
+            Marketplace
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-2 sm:px-4 ">
             {dummyItems.map((item) => (
               <div
                 key={item.id}
-                className=" rounded-t-2xl pb-4 cursor-pointer "
+                className=" rounded-t-2xl lg:pb-3 cursor-pointer "
               >
                 <img
                   src={item.img}
-                  className=" mb-2 rounded-xl hover:shadow-2xl shadow w-full h-60 object-cover"
+                  className=" mb-2 rounded-t-xl hover:shadow-2xl shadow w-full h-60 object-cover"
                 />
-                <div className="pt-4">
+                <div className="p-3 bg-white rounded-b-xl">
                   <h4 className="font-semibold pb-2">{item.name}</h4>
                   <p className="text-gray-600 font-light text-sm">
                     {item.price}

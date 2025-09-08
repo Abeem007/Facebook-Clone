@@ -92,7 +92,7 @@ const sponsoredAds = [
 
 const Advert: React.FC = () => {
   return (
-    <div className="pt-3 text-sm text-gray-700 ">
+    <div className="hidden lg:block pt-3 text-sm text-gray-700 ">
       <aside>
         {/* Sponsored */}
         <div className="mb-4">

@@ -113,27 +113,34 @@ const FriendsPage: React.FC = () => {
   };
   return (
     <div className=" bg-gray-100 min-h-screen">
-      <Header  />
-      {/* <h2 className="text-xl font-semibold mb-4">Friends</h2> */}
-      <div className="flex  flex-col md:flex-row ">
-        <div className="hidden md:block md:w-80 shrink-0 bg-white  ">
-          <span className="flex justify-between items-center font-bold px-4 pt-4">
-            <h1 className="text-2xl ">Friends</h1>{" "}
-            <IoSettings className="font-bold  text-2xl" />
+      <Header />
+     
+      <div className="flex  flex-col md:flex-row max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 ">
+        <div className="hidden md:block md:w-64 lg:w-72 shrink-0 bg-white  ">
+          <span className="flex justify-between items-center font-bold px-4 pt-4 pb-2">
+            <h1 className="text-xl lg:text-2xl">Friends</h1>{" "}
+            <IoSettings className="font-bold  text-xl lg:text-2xl cursor-pointer" />
           </span>
           {/* <SideBar /> */}
-          <aside className="hidden  lg:block w-72 shrink-0 px-2 pt-4 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded">
-            {menu.map(({ icon: Icon, label,link }) => (
+          <aside className=" px-2 pb-4 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded">
+            {menu.map(({ icon: Icon, label, link }) => (
               <div
                 key={label}
                 className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-100 cursor-pointer"
               >
-                {link ? (<Link to={link} onClick={()=>label === "Home" && setActiveTab("home")} className="flex items-center gap-3 pl-0.5 w-full"><ActionIcon icon={Icon} />
-                  <span className="text-md  ">{label}</span>
-                </Link>) : (
+                {link ? (
+                  <Link
+                    to={link}
+                    onClick={() => label === "Home" && setActiveTab("home")}
+                    className="flex items-center gap-3 pl-0.5 w-full"
+                  >
+                    <ActionIcon icon={Icon} />
+                    <span className="text-md  ">{label}</span>
+                  </Link>
+                ) : (
                   <>
                     <ActionIcon icon={Icon} />
-                    <span className="text-md ">{label}</span>
+                    <span className="text-sm lg:text:md ">{label}</span>
                   </>
                 )}
               </div>
@@ -142,13 +149,16 @@ const FriendsPage: React.FC = () => {
         </div>
         {/* {MENU ITEMS} */}
 
-        <div className="flex-1 p-4">
-          <h2 className="text-2xl font-semibold mb-4 pb-4 pl-4 text-gray-900">
+        <div className="flex-1 p-2 sm:p-4 lg:p-6">
+          <h2 className="text-xl md:text-2xl font-semibold pb-1  mb-4 text-gray-900">
             Friend Requests
           </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pl-4">
+          <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             {friends.map((friend) => (
-              <li key={friend.id} className="flex justify-center">
+              <li
+                key={friend.id}
+                className="flex justify-center items-center "
+              >
                 <FriendsPostCard
                   friend={friend}
                   onConfirm={handleConfirm}

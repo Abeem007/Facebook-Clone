@@ -11,21 +11,23 @@ const Dashboard: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
-      <div className="grid grid-cols-15 py-6">
-        <div className="hidden lg:block col-span-4">
-          <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
-            <SideBar />
+      
+        <div className="flex justify-center gap-4 py-3 px-2 sm:px-4 lg:py-6 ">
+          <div className="hidden lg:block w-72 shhrink-0">
+            <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+              <SideBar />
+            </div>
+          </div>
+          <div className="flex-1 max-w-2xl ">
+            <Feed />
+          </div>
+          <div className="hidden lg:block w-80 shrink-0 ">
+            <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+              <Advert />
+            </div>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-7">
-          <Feed />
-        </div>
-        <div className="hidden xl:block col-span-4 ">
-          <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
-            <Advert />
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 };

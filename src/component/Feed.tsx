@@ -44,7 +44,7 @@ const Feed: React.FC = () => {
     if (loading) return <p className="text-center py-6">Loading feed…</p>;
 
     return (
-        <div className="flex flex-col gap-4 w-full max-w-xl mx-auto px-8">
+        <div className="flex flex-col gap-4 w-full mx-auto sm:px-4">
            
             <NewPostForm />
         {posts.length === 0 ? (
