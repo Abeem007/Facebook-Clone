@@ -15,7 +15,7 @@ Features
 - ⚡ Fast performance with Vite + React
 
 Live Demo
-> radiant-twilight-3747bc.netlify.app
+https://radiant-twilight-3747bc.netlify.app/dashboard
 
 Screenshots
 <img width="1440" height="781" alt="Screenshot 2025-08-29 at 13 26 27" src="https://github.com/user-attachments/assets/b85b69ad-d61b-4eb3-82b3-0170f991abea" />
