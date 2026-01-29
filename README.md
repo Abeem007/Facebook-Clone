@@ -13,7 +13,10 @@ Features
 - 🧑‍🤝‍🧑 Friends/Contacts sidebar
 
 - ⚡ Fast performance with Vite + React
-     
+
+Live Demo
+> radiant-twilight-3747bc.netlify.app
+
 Screenshots
 <img width="1440" height="781" alt="Screenshot 2025-08-29 at 13 26 27" src="https://github.com/user-attachments/assets/b85b69ad-d61b-4eb3-82b3-0170f991abea" />
 ![Screenshot 2025-08-29 at 13 26 04](https://github.com/user-attachments/assets/7231aed4-0c74-4dca-a2f7-021432c173d8)
