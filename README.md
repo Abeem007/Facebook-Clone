@@ -17,7 +17,7 @@ Users can sign up, log in, post updates, like, and comment.
 ## Live Demo
 https://radiant-twilight-3747bc.netlify.app/dashboard
 
-### Screenshots
+## Screenshots
 <img width="1440" height="781" alt="Screenshot 2025-08-29 at 13 26 27" src="https://github.com/user-attachments/assets/b85b69ad-d61b-4eb3-82b3-0170f991abea" />
 ![Screenshot 2025-08-29 at 13 26 04](https://github.com/user-attachments/assets/7231aed4-0c74-4dca-a2f7-021432c173d8)
 ![Screenshot 2025-08-29 at 13 33 30](https://github.com/user-attachments/assets/25be9ba9-1aa2-4389-a5bf-61f4e14198c7)
